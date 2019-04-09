@@ -8,20 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		6375EE3822501C41003DD2CD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6375EE3722501C41003DD2CD /* DetailViewController.swift */; };
-		6375EE3A2250CC9E003DD2CD /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6375EE392250CC9E003DD2CD /* Alert.swift */; };
-		637D4E2B2252B3FB003493AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 637D4E2A2252B3FB003493AB /* Assets.xcassets */; };
 		63DD88F0222C55EB00156665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DD88EF222C55EB00156665 /* AppDelegate.swift */; };
 		63DD88F2222C55EB00156665 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DD88F1222C55EB00156665 /* ViewController.swift */; };
 		63DD88F5222C55EB00156665 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DD88F3222C55EB00156665 /* Main.storyboard */; };
 		63DD88FA222C55EE00156665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DD88F8222C55EE00156665 /* LaunchScreen.storyboard */; };
 		63DD8902222C572400156665 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DD8901222C572400156665 /* ItemCell.swift */; };
 		63DD8904222C7DA100156665 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DD8903222C7DA100156665 /* Item.swift */; };
+		6B009B44225CE0B3001AAE24 /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B009B43225CE0B3001AAE24 /* SortViewController.swift */; };
+		6B20A42B225C937B00E7D40B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B20A42A225C937B00E7D40B /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6375EE3722501C41003DD2CD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		6375EE392250CC9E003DD2CD /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		637D4E2A2252B3FB003493AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		63DD88EC222C55EB00156665 /* AgainANewOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgainANewOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DD88EF222C55EB00156665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63DD88F1222C55EB00156665 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +28,8 @@
 		63DD88FB222C55EE00156665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63DD8901222C572400156665 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		63DD8903222C7DA100156665 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		6B009B43225CE0B3001AAE24 /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
+		6B20A42A225C937B00E7D40B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				63DD88EE222C55EB00156665 /* AgainANewOne */,
-				63DD88ED222C55EB00156665 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +56,7 @@
 				63DD88EC222C55EB00156665 /* AgainANewOne.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		63DD88EE222C55EB00156665 /* AgainANewOne */ = {
@@ -64,14 +64,15 @@
 			children = (
 				63DD88EF222C55EB00156665 /* AppDelegate.swift */,
 				63DD88F1222C55EB00156665 /* ViewController.swift */,
-				6375EE392250CC9E003DD2CD /* Alert.swift */,
 				63DD8903222C7DA100156665 /* Item.swift */,
 				63DD8901222C572400156665 /* ItemCell.swift */,
 				63DD88F3222C55EB00156665 /* Main.storyboard */,
+				6B009B43225CE0B3001AAE24 /* SortViewController.swift */,
 				6375EE3722501C41003DD2CD /* DetailViewController.swift */,
 				63DD88F8222C55EE00156665 /* LaunchScreen.storyboard */,
 				63DD88FB222C55EE00156665 /* Info.plist */,
-				637D4E2A2252B3FB003493AB /* Assets.xcassets */,
+				63DD88ED222C55EB00156665 /* Products */,
+				6B20A42A225C937B00E7D40B /* Media.xcassets */,
 			);
 			path = AgainANewOne;
 			sourceTree = "<group>";
@@ -135,7 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63DD88FA222C55EE00156665 /* LaunchScreen.storyboard in Resources */,
-				637D4E2B2252B3FB003493AB /* Assets.xcassets in Resources */,
+				6B20A42B225C937B00E7D40B /* Media.xcassets in Resources */,
 				63DD88F5222C55EB00156665 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,9 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6375EE3A2250CC9E003DD2CD /* Alert.swift in Sources */,
 				63DD8904222C7DA100156665 /* Item.swift in Sources */,
 				63DD88F2222C55EB00156665 /* ViewController.swift in Sources */,
+				6B009B44225CE0B3001AAE24 /* SortViewController.swift in Sources */,
 				6375EE3822501C41003DD2CD /* DetailViewController.swift in Sources */,
 				63DD88F0222C55EB00156665 /* AppDelegate.swift in Sources */,
 				63DD8902222C572400156665 /* ItemCell.swift in Sources */,
@@ -297,7 +298,6 @@
 		63DD88FF222C55EE00156665 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B3V4R638RP;
 				INFOPLIST_FILE = AgainANewOne/Info.plist;
@@ -315,7 +315,6 @@
 		63DD8900222C55EE00156665 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B3V4R638RP;
 				INFOPLIST_FILE = AgainANewOne/Info.plist;

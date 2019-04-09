@@ -96,8 +96,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kA6-fL-ON8">
-                                <rect key="frame" x="0.0" y="17" width="414" height="862"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kA6-fL-ON8">
+                                <rect key="frame" x="0.0" y="74" width="414" height="788"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="Item" rowHeight="143" id="dgH-SZ-Ioy" customClass="ItemCell" customModule="AgainANewOne" customModuleProvider="target">
@@ -119,7 +119,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dQ-Wa-Mn1">
                                                     <rect key="frame" x="344" y="95" width="30" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <state key="normal" title="Buy">
+                                                    <state key="normal" title="Add">
                                                         <color key="titleColor" red="0.95378702878952026" green="0.3061833381652832" blue="0.031139843165874481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
@@ -169,13 +169,23 @@
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="VlX-lU-6Cp"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4M-QI-LL9">
+                                <rect key="frame" x="200" y="44" width="194" height="30"/>
+                                <state key="normal" title="Sort"/>
+                                <connections>
+                                    <segue destination="O3T-gL-mAZ" kind="show" id="ibj-AM-N0Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kA6-fL-ON8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3CY-qi-cnN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kA6-fL-ON8" secondAttribute="trailing" id="7XX-rF-SRT"/>
+                            <constraint firstItem="kA6-fL-ON8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="FCM-zY-dmi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kA6-fL-ON8" secondAttribute="bottom" id="I5C-Mh-yq9"/>
-                            <constraint firstItem="kA6-fL-ON8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="v02-sj-28G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m4M-QI-LL9" secondAttribute="trailing" constant="20" id="LVZ-0f-3e2"/>
+                            <constraint firstItem="m4M-QI-LL9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="200" id="dDa-2j-HeP"/>
+                            <constraint firstItem="m4M-QI-LL9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wgI-Iz-1yS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -185,7 +195,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="388" y="123.68815592203899"/>
+            <point key="canvasLocation" x="386.95652173913044" y="123.21428571428571"/>
+        </scene>
+        <!--Sort View Controller-->
+        <scene sceneID="h2S-DG-4vD">
+            <objects>
+                <viewController id="O3T-gL-mAZ" customClass="SortViewController" customModule="AgainANewOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hgd-Z8-ahp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G11-Ym-8Fj">
+                                <rect key="frame" x="0.0" y="84" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVC-zm-kCG">
+                                <rect key="frame" x="0.0" y="199" width="414" height="53"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="amu-a1-ZNk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZVC-zm-kCG" firstAttribute="top" secondItem="G11-Ym-8Fj" secondAttribute="bottom" constant="50" id="8Ae-GT-lw0"/>
+                            <constraint firstItem="ZVC-zm-kCG" firstAttribute="leading" secondItem="whf-Gd-soh" secondAttribute="leading" id="Ndg-JJ-vHT"/>
+                            <constraint firstItem="G11-Ym-8Fj" firstAttribute="leading" secondItem="whf-Gd-soh" secondAttribute="leading" id="PlQ-rs-SKc"/>
+                            <constraint firstItem="whf-Gd-soh" firstAttribute="trailing" secondItem="ZVC-zm-kCG" secondAttribute="trailing" id="Ytr-ws-CCD"/>
+                            <constraint firstItem="G11-Ym-8Fj" firstAttribute="top" secondItem="whf-Gd-soh" secondAttribute="top" constant="40" id="cta-Nf-R4C"/>
+                            <constraint firstItem="whf-Gd-soh" firstAttribute="trailing" secondItem="G11-Ym-8Fj" secondAttribute="trailing" id="sIg-tR-d5j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="whf-Gd-soh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ej-NZ-dz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1140.5797101449277" y="-607.36607142857144"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GR3-eR-ooc">
@@ -261,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X86-Sn-QhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1334" y="124"/>
+            <point key="canvasLocation" x="-1334.7826086956522" y="123.88392857142857"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="gUg-vE-oCN">
@@ -318,4 +366,7 @@
         <image name="river_island_mirror" width="400" height="300"/>
         <image name="work_in_progress" width="237" height="213"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="amu-a1-ZNk"/>
+    </inferredMetricsTieBreakers>
 </document>

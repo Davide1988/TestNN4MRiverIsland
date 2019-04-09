@@ -11,9 +11,10 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource {
     
     
+    
     final let url = URL(string: "https://static.ristack.nn4maws.net/category/2506/products.json")
     
-    private var ArrayProducts = [Item]()
+    var ArrayProducts = [Item]()
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -22,8 +23,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
-    
     
     
     
@@ -41,7 +40,11 @@ class ViewController: UIViewController, UITableViewDataSource {
                 let products = try decoder.decode(Products.self , from: data)
                 for item in products.Products {
                     self.ArrayProducts.append(item)
-                    self.sortByPrice()
+          //          let sort = SortViewController()
+         //           let response = sort.selectionChoice()
+        //            if response == "hiToLow"{
+             //           self.ArrayProducts.sort{$0.price() < $1.price()}
+                    
                 }
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -53,18 +56,13 @@ class ViewController: UIViewController, UITableViewDataSource {
         }.resume()
     }
     
-    func sortByPrice() {
-//        var NewArray = ArrayProducts.map({ (object.cost) -> Int in
-//            return object
-//        })
-        ArrayProducts.sort{$0.price() < $1.price()}
-        print(ArrayProducts[0].cost)
-    }
     
-//    func toInt(){
-//        for object in ArrayProducts{
-//            object.cost = Int(object.cost)
-//        }
+//
+//    func sortByPrice() {
+//        ArrayProducts.sort{$0.price() < $1.price()}
+//        print(ArrayProducts[0].cost)
+//    }
+    
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
