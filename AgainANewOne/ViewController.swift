@@ -39,13 +39,14 @@ class ViewController: UIViewController, UITableViewDataSource {
                 let decoder = JSONDecoder()
                 let products = try decoder.decode(Products.self , from: data)
                 for item in products.Products {
-                    self.ArrayProducts.append(item)
-          //          let sort = SortViewController()
-         //           let response = sort.selectionChoice()
-        //            if response == "hiToLow"{
-             //           self.ArrayProducts.sort{$0.price() < $1.price()}
-                    
+                   self.ArrayProducts.append(item)
                 }
+                
+                let sort = SortViewController()
+                let response = sort.selectionChoice()
+                if response == "hiToLow"{
+                    self.sortByPrice()}
+                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -57,11 +58,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     
-//
-//    func sortByPrice() {
-//        ArrayProducts.sort{$0.price() < $1.price()}
-//        print(ArrayProducts[0].cost)
-//    }
+
+    func sortByPrice() {
+        ArrayProducts.sort{$0.price() < $1.price()}
+    }
     
     
     
