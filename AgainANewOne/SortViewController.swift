@@ -8,16 +8,16 @@
 
 import UIKit
 
-protocol Selection {
-    func selectionChoice() -> String
-}
+//protocol Selection {
+//    func selectionChoice() -> String
+//}
 
 class SortViewController: UIViewController {
     
     
-    func selectionChoice() -> String {
-        return "hiToLow"
-    }
+//    func selectionChoice() -> String {
+//        return "hiToLow"
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +27,25 @@ class SortViewController: UIViewController {
     
   
     
-
-    @IBAction func PassDetails(_ sender: Any) {
-        self.performSegue(withIdentifier: "backToList", sender: nil)
-        }
+//
+//    @IBAction func PassDetails(_ sender: Any) {
+//        ViewController = "hiToLow"
+//        self.performSegue(withIdentifier: "backToList", sender: nil)
+//        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let destinationVC = segue.destination as! ViewController
+        destinationVC.kindOfSort = "lowToHigh"
+    }
+    
+    
+    func pepareHighToLow(for segue: UIStoryboardSegue, sender: Any?){
+        let destinationVC = segue.destination as! ViewController
+        destinationVC.kindOfSort = "HighToLow"
+    
+        
+    }
+    
     
     
     

@@ -20,10 +20,19 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadJson()
+        print(kindOfSort)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    @IBAction func unwindSegue(_ sender: UIStoryboardSegue){
+        downloadJson()
+    }
+    
+    var kindOfSort = ""
+    
+
+
     
     
     
@@ -41,14 +50,14 @@ class ViewController: UIViewController, UITableViewDataSource {
                 for item in products.Products {
                    self.ArrayProducts.append(item)
                 }
-                
-                let sort = SortViewController()
-                let response = sort.selectionChoice()
-                if response == "hiToLow"{
-                    self.sortByPrice()}
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                print(self.kindOfSort)
+                if self.kindOfSort == "lowToHigh"{
+                    self.sortByPriceLowToHigh()
+                }else if  self.kindOfSort == "highToLow" {
+                    self.sortByPriceHighToLow()
+                }
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
                 }
             }catch {
                 print("error 404")
@@ -57,13 +66,20 @@ class ViewController: UIViewController, UITableViewDataSource {
         }.resume()
     }
     
+    // sorting methods
     
-
-    func sortByPrice() {
-        ArrayProducts.sort{$0.price() < $1.price()}
+    
+    func sortByPriceHighToLow() {
+        ArrayProducts.sort{$0.price() > $1.price()}
     }
     
     
+
+    func sortByPriceLowToHigh() {
+        ArrayProducts.sort{$0.price() < $1.price()}
+    }
+    
+    // cell rendering
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
@@ -99,7 +115,11 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         return cell
     }
+    
+ 
 }
+
+
 //    func tableView(_ tableView: UITableView, didSelectItemAt indexPath: IndexPath){
 //
 //        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
