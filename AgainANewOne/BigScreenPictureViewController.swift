@@ -1,24 +1,23 @@
 //
-//  DetailViewController.swift
+//  BigScreenPictureViewController.swift
 //  AgainANewOne
 //
-//  Created by David on 30/03/2019.
+//  Created by Davide on 11/04/2019.
 //  Copyright © 2019 David. All rights reserved.
 //
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class BigScreenPictureViewController: UIViewController {
+
     
-    @IBOutlet weak var Image: UIImageView!
+    @IBOutlet weak var pictureEnlarged: UIImageView!
     
-    var image = UIImage()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         // Do any additional setup after loading the view.
     }
     

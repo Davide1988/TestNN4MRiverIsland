@@ -29,13 +29,16 @@ class ViewController: UIViewController, UITableViewDataSource {
         downloadJson()
     }
     
+    @IBAction func unwindSegueHiToLow(_ sender: UIStoryboardSegue){
+        self.kindOfSort = "highToLow"
+        downloadJson()
+    }
+    
+    
+    
     var kindOfSort = ""
     
 
-
-    
-    
-    
     func downloadJson() {
         guard let downloadURL = url else {return}
         
@@ -107,8 +110,7 @@ class ViewController: UIViewController, UITableViewDataSource {
                     let image = UIImage(data: data)
                     DispatchQueue.main.async {
                         cell.Picture.image = image
-                        let detail = DetailViewController()
-                        detail.image = image!
+                      
                     }
                 }
             }
@@ -118,6 +120,15 @@ class ViewController: UIViewController, UITableViewDataSource {
     
  
 }
+
+
+
+
+
+
+
+
+
 
 
 //    func tableView(_ tableView: UITableView, didSelectItemAt indexPath: IndexPath){
@@ -132,7 +143,7 @@ class ViewController: UIViewController, UITableViewDataSource {
 //            self.navigationController?.pushViewController(desVC, animated: true)
 //
 //    }
-    
+
 
 
 
