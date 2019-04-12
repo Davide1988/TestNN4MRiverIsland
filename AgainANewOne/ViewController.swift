@@ -17,6 +17,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     var ArrayProducts = [Item]()
     @IBOutlet weak var tableView: UITableView!
     
+    
+   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadJson()
@@ -93,6 +97,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         return ArrayProducts.count
     }
     
+    var imageToPass: UIImage!
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Item") as? ItemCell else {
             return UITableViewCell()
@@ -110,6 +116,11 @@ class ViewController: UIViewController, UITableViewDataSource {
                     let image = UIImage(data: data)
                     DispatchQueue.main.async {
                         cell.Picture.image = image
+                        self.imageToPass = image!
+                        
+                        //cell.Picture is where i have to add the gesture thingy
+                        self.addPanGesture(view: cell.Picture)
+
                       
                     }
                 }
@@ -118,8 +129,28 @@ class ViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
- 
+    
+   
+    
+    
+    func addPanGesture(view: UIView){
+            let pan = UIPanGestureRecognizer(target: self, action: #selector(ViewController.handleTap(sender:)))
+            view.addGestureRecognizer(pan)
+        
+    }
+    
+    
+    
+    @objc func handleTap(sender: UIPanGestureRecognizer){
+      
+        let fileView = sender.view
+        print(fileView!)
+        
+    }
+    
+    
 }
+
 
 
 

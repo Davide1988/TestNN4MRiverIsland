@@ -136,6 +136,7 @@
                                                 </label>
                                                 <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-HD-UFx">
                                                     <rect key="frame" x="10" y="5" width="120" height="120"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="3Qx-3v-4Kv"/>
                                                         <constraint firstAttribute="height" constant="120" id="V6M-A3-Ukj"/>
@@ -186,6 +187,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="VlX-lU-6Cp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iS8-qC-ZP4"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4M-QI-LL9">
@@ -226,34 +228,34 @@
             </objects>
             <point key="canvasLocation" x="386.95652173913044" y="123.21428571428571"/>
         </scene>
-        <!--Big Screen Picture View Controller-->
-        <scene sceneID="fuL-gm-YiC">
+        <!--Picture View Controller-->
+        <scene sceneID="tBy-TI-3uF">
             <objects>
-                <viewController id="l3N-qr-WMD" customClass="BigScreenPictureViewController" customModule="AgainANewOne" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Hil-qX-YRr">
+                <viewController storyboardIdentifier="PictureViewController" id="BRD-GF-oAT" customClass="PictureViewController" customModule="AgainANewOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q8M-Iz-G7a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Krz-N1-x5B">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-OD-MYb">
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Krz-N1-x5B" firstAttribute="trailing" secondItem="eNh-fJ-cch" secondAttribute="trailing" id="9tM-Si-NR8"/>
-                            <constraint firstItem="Krz-N1-x5B" firstAttribute="top" secondItem="eNh-fJ-cch" secondAttribute="top" id="F4M-Yg-ojV"/>
-                            <constraint firstItem="Krz-N1-x5B" firstAttribute="leading" secondItem="eNh-fJ-cch" secondAttribute="leading" id="Rx2-Lp-O8w"/>
-                            <constraint firstItem="eNh-fJ-cch" firstAttribute="bottom" secondItem="Krz-N1-x5B" secondAttribute="bottom" id="Vy4-HQ-Jk8"/>
+                            <constraint firstItem="zK6-OD-MYb" firstAttribute="top" secondItem="A3B-O0-Zbv" secondAttribute="top" id="Ftq-hl-iJr"/>
+                            <constraint firstItem="A3B-O0-Zbv" firstAttribute="trailing" secondItem="zK6-OD-MYb" secondAttribute="trailing" id="Ydk-AK-xHT"/>
+                            <constraint firstItem="A3B-O0-Zbv" firstAttribute="bottom" secondItem="zK6-OD-MYb" secondAttribute="bottom" id="jYd-Oe-Lgm"/>
+                            <constraint firstItem="zK6-OD-MYb" firstAttribute="leading" secondItem="A3B-O0-Zbv" secondAttribute="leading" id="sno-ke-It0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="eNh-fJ-cch"/>
+                        <viewLayoutGuide key="safeArea" id="A3B-O0-Zbv"/>
                     </view>
                     <connections>
-                        <outlet property="pictureEnlarged" destination="Krz-N1-x5B" id="Fip-ef-cUQ"/>
+                        <outlet property="BigPic" destination="zK6-OD-MYb" id="xTC-S1-hQE"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GXK-EK-3fE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXk-Jh-bnl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2038" y="81"/>
+            <point key="canvasLocation" x="1812" y="158"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SOz-Eo-2pl">

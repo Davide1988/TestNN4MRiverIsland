@@ -1,18 +1,25 @@
 //
-//  BigScreenPictureViewController.swift
+//  PictureViewController.swift
 //  AgainANewOne
 //
-//  Created by Davide on 11/04/2019.
+//  Created by Davide on 12/04/2019.
 //  Copyright © 2019 David. All rights reserved.
 //
 
 import UIKit
 
-class BigScreenPictureViewController: UIViewController {
+class PictureViewController: UIViewController {
 
+    @IBOutlet weak var BigPic: UIImageView!
     
-    @IBOutlet weak var pictureEnlarged: UIImageView!
     
+    var image : UIImage!
+    
+//    init(_ image: UIImage){
+//        self.image = image
+//    }
+    
+ 
     
     
     override func viewDidLoad() {
@@ -20,6 +27,8 @@ class BigScreenPictureViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+
     
 
     /*
